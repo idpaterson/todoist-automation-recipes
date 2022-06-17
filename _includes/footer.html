@@ -1,0 +1,33 @@
+<script>
+  {%- include scripts/custom.js -%}
+</script>
+
+<footer class="footer py-4 js-page-footer">
+  <div class="main">
+    {%- include snippets/get-locale-string.html key='COPYRIGHT_AUTHOR' -%}
+    {%- assign _locale_copyright_author = __return -%}
+    <div class="site-info mt-2">
+      <div>
+        {%- include snippets/get-locale-string.html key='COPYRIGHT_AUTHOR' -%}
+        {%- assign _locale_copyright_author = __return -%}
+        © {{ "now" | date: "%Y" }} 
+        <a 
+            href="https://github.com/{{ site.repository }}/graphs/contributors"
+            target="_blank"
+        >{{ site.title }} {{ _locale_copyright_author }}</a>.
+        Powered by 
+        <a 
+            title="Jekyll is a simple, blog-aware, static site generator." 
+            href="http://jekyllrb.com/" 
+            target="_blank"
+        >Jekyll</a> 
+        &amp; 
+        <a
+            title="TeXt is a super customizable Jekyll theme." 
+            href="https://github.com/kitian616/jekyll-TeXt-theme"
+            target="_blank"
+        >TeXt Theme</a>.
+      </div>
+    </div>
+  </div>
+</footer>

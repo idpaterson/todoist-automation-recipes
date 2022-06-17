@@ -1,0 +1,53 @@
+ul.toc {
+  >li {
+    margin: 0 0 0.5rem 0;
+  }
+
+  &--ellipsis>li {
+    // TOC is too narrow for nowrap
+    white-space: normal;
+  }
+}
+
+.article__license {
+  // MIT license has no logo; hide the linked image
+  a[rel="license"]+a[rel="license"] {
+    display: none;
+  }
+}
+
+.article__content {
+  img.border, .border > img {
+    border-color: #fff;
+    box-shadow: 0 0 0 1px rgba(#000, .15);
+  }
+}
+
+.footer {
+  a {
+    // Otherwise the text is red on a red background
+    @include link-colors(rgba($footer-text-color, 0.9), $footer-text-color);
+  }
+}
+
+.site-tags {
+  // Show All button is unnecessary if the archive is unfiltered, and tag list only works with posts
+  display: none;
+  .archive--filtered & {
+    display: block;
+  }
+
+  .tag-button--all {
+
+    // Post count is irrelevant when content is organized in collections
+    > .tag-button__count {
+      display: none;
+    }
+  }
+}
+
+// Allow some of the macos screenshot to slide behind content below it. Technically this should be 
+// relative to the image scaling... Hold the option key to screenshot a window without the shadow.
+.macos-window-shadow-screenshot {
+  margin-bottom: -32px;
+}

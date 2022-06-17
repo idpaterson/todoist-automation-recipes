@@ -1,0 +1,28 @@
+title: Automation Recipes for Todoist
+
+repository: idpaterson/todoist-automation-recipes
+repository_tree: main
+license: MIT
+
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:path
+
+remote_theme: kitian616/jekyll-TeXt-theme
+
+defaults:
+  - scope:
+      path: ""
+      type: recipes
+    values:
+      layout: article
+      show_edit_on_github: true
+      aside:
+        toc: true
+
+analytics:
+  provider: google
+  google:
+    tracking_id: G-FH2BREGTKQ
+    anonymize_ip: true
